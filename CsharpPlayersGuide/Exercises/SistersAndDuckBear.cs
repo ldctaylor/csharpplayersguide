@@ -36,7 +36,7 @@ namespace CsharpPlayersGuide.Exercises
                 duckbear = i % numberOfSiblings;
                 if (duckbear > sister)
                 {
-                    Console.WriteLine($"Ttotal of {i} eggs - sisters get {sister} and he gets {duckbear}");
+                    Console.WriteLine($"Duckbear gets {duckbear} eggs while each sister only gets {sister} when there's a total of {i} eggs.");
                 }
             }
             Console.WriteLine("Lucky duckbear!");
