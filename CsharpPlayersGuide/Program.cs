@@ -2,6 +2,10 @@
 //The purpose of this is to help P-Thag, a triangle farmer, calculate the area of 
 //all his triangles.
 
+using CsharpPlayersGuide.Exercises;
+
+SistersAndDuckBear.DistributeEggs();
+
 int number;
 
 Console.WriteLine("What is the base width of the triangle? Please only enter a number as otherwise the program will break.");
