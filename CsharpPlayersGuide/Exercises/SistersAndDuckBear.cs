@@ -14,7 +14,7 @@ namespace CsharpPlayersGuide.Exercises
     internal static class SistersAndDuckBear
     {
         static int sister, duckbear, totalEggs = 0;
-        static int numberOfSiblings = 3;
+        static int numberOfSiblings = 4;
 
         public static void DistributeEggs()
         {
@@ -25,6 +25,21 @@ namespace CsharpPlayersGuide.Exercises
             string pluralise = (sister == 1 ? "" : "s");
             string duckbearPluralise = (duckbear == 1 ? "" : "s");
             Console.WriteLine(sister + " egg" + pluralise + " for each sister and " + duckbear + " egg" + duckbearPluralise + " for the duckbear.");
+        }
+
+        public static void DuckBearLucky()
+        {
+           Console.WriteLine("Duckbear is lucky when he gets more eggs than the sisters:");
+            for (int i = 0; i < 100; i++)
+            {
+                sister = i / numberOfSiblings;
+                duckbear = i % numberOfSiblings;
+                if (duckbear > sister)
+                {
+                    Console.WriteLine($"Ttotal of {i} eggs - sisters get {sister} and he gets {duckbear}");
+                }
+            }
+            Console.WriteLine("Lucky duckbear!");
         }
 
     }

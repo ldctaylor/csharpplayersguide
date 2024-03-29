@@ -5,6 +5,7 @@
 using CsharpPlayersGuide.Exercises;
 
 SistersAndDuckBear.DistributeEggs();
+SistersAndDuckBear.DuckBearLucky();
 
 int number;
 
