@@ -4,7 +4,8 @@
 
 using CsharpPlayersGuide.Exercises;
 
-Prototype.PrototypeMethod();
+Cannon.FireCannon();
+//Prototype.PrototypeMethod();
 //DefenceOfConsolas.AttackConsolas();
 //Triangle.Initialise();
 //Text.PracticeEscaping();
