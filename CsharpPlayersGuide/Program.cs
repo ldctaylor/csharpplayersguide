@@ -1,11 +1,12 @@
 ﻿
-//The purpose of this is to help P-Thag, a triangle farmer, calculate the area of 
-//all his triangles.
+//Below are the exercises for C# Players Guide.
+//Uncomment the exercise you would like to run.
 
 using CsharpPlayersGuide.Exercises;
 
-Triangle.Initialise();
-//Text.PracticeEscaping();
+Console.Title = "Hello;";
+//Triangle.Initialise();
+Text.PracticeEscaping();
 //Beep.BeepBoop();
 //SistersAndDuckBear.DistributeEggs();
 //SistersAndDuckBear.DuckBearLucky();

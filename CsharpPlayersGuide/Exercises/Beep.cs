@@ -11,10 +11,10 @@ namespace CsharpPlayersGuide.Exercises
         public static void BeepBoop()
         {
             int frequency = 250;
-            int length = 400;
-            for (int i = 0; i < 15; i++)
+            int length = 200;
+            for (int i = 0; i < 20; i++)
             {
-                Console.Beep(frequency += 50, length += 60);
+                Console.Beep(frequency += 80, length);
             }
         }
     }
