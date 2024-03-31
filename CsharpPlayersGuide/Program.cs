@@ -4,9 +4,9 @@
 
 using CsharpPlayersGuide.Exercises;
 
-Console.Title = "Hello;";
+DefenceOfConsolas.AttackConsolas();
 //Triangle.Initialise();
-Text.PracticeEscaping();
+//Text.PracticeEscaping();
 //Beep.BeepBoop();
 //SistersAndDuckBear.DistributeEggs();
 //SistersAndDuckBear.DuckBearLucky();
