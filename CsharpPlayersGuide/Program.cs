@@ -4,7 +4,8 @@
 
 using CsharpPlayersGuide.Exercises;
 
-Cannon.FireCannon();
+Replicator.ReplicatorOfDTo();
+//Cannon.FireCannon();
 //Prototype.PrototypeMethod();
 //DefenceOfConsolas.AttackConsolas();
 //Triangle.Initialise();
