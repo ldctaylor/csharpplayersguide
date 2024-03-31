@@ -5,12 +5,12 @@
 using CsharpPlayersGuide.Exercises;
 using CsharpPlayersGuide.Exercises.Utilities;
 
-AskNumber.AskForNumberInRange("Please enter a number",0,10);
+//AskNumber.AskForNumberInRange("Please enter a number",0,10);
 //Replicator.ReplicatorOfDTo();
 //Cannon.FireCannon();
 //Prototype.PrototypeMethod();
 //DefenceOfConsolas.AttackConsolas();
-//Triangle.Initialise();
+Triangle.Initialise();
 //Text.PracticeEscaping();
 //Beep.BeepBoop();
 //SistersAndDuckBear.DistributeEggs();
