@@ -3,8 +3,10 @@
 //Uncomment the exercise you would like to run.
 
 using CsharpPlayersGuide.Exercises;
+using CsharpPlayersGuide.Exercises.Utilities;
 
-Replicator.ReplicatorOfDTo();
+AskNumber.AskForNumberInRange("Please enter a number",0,10);
+//Replicator.ReplicatorOfDTo();
 //Cannon.FireCannon();
 //Prototype.PrototypeMethod();
 //DefenceOfConsolas.AttackConsolas();
