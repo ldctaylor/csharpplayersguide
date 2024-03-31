@@ -4,7 +4,8 @@
 
 using CsharpPlayersGuide.Exercises;
 
-DefenceOfConsolas.AttackConsolas();
+Prototype.PrototypeMethod();
+//DefenceOfConsolas.AttackConsolas();
 //Triangle.Initialise();
 //Text.PracticeEscaping();
 //Beep.BeepBoop();
