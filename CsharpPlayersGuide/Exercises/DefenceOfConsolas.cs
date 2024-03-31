@@ -1,4 +1,5 @@
-﻿using System;
+﻿using CsharpPlayersGuide.Exercises.Utilities;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -32,7 +33,7 @@ namespace CsharpPlayersGuide.Exercises
             Console.BackgroundColor = ConsoleColor.White;
             Console.ForegroundColor = ConsoleColor.DarkBlue;
 
-            DefenceOfConsolas[] deployments = { defence1, defence2, defence3, defence4 };
+            DefenceOfConsolas[] deployments = [defence1, defence2, defence3, defence4];
 
             Console.WriteLine("Deploy to:");
             foreach (DefenceOfConsolas deployment in deployments)
@@ -49,10 +50,8 @@ namespace CsharpPlayersGuide.Exercises
 
         public static void AttackConsolas()
         {
-            Console.Write("What is the target row for the attack? ");
-            int targetRow = Convert.ToInt32(Console.ReadLine());
-            Console.Write("\nWhat is the target column for the attack? ");
-            int targetColumn =Convert.ToInt32(Console.ReadLine());
+            int targetRow = AskNumber.AskForNumber("What is the target row for the attack? ");
+            int targetColumn = AskNumber.AskForNumber("\nWhat is the target column for the attack? ");
 
             DefenceOfConsolas attack = new(targetRow, targetColumn);
 

@@ -8,17 +8,10 @@ using static System.Runtime.InteropServices.JavaScript.JSType;
 
 namespace CsharpPlayersGuide.Exercises
 {
-    internal class Triangle
+    internal class Triangle(int b, int h)
     {
-        int triangleBase = 0;
-        int triangleHeight = 0;
-
-        public Triangle(int b, int h)
-    {
-            triangleBase = b;
-            triangleHeight = h;
-
-    }
+        int triangleBase = b;
+        int triangleHeight = h;
 
         public static Triangle Initialise()
         {

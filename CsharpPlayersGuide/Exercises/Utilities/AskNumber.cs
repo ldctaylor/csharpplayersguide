@@ -11,7 +11,6 @@ namespace CsharpPlayersGuide.Exercises.Utilities
     {
         public static int AskForNumber(string message)
         {
-            int number;
             bool success;
 
             Console.WriteLine(message);
@@ -20,7 +19,7 @@ namespace CsharpPlayersGuide.Exercises.Utilities
                 while (true)
                 {
                     string? input = Console.ReadLine();
-                    success = int.TryParse(input, out number);
+                    success = int.TryParse(input, out int number);
 
                     if (success)
                     {
@@ -36,7 +35,6 @@ namespace CsharpPlayersGuide.Exercises.Utilities
 
         public static int AskForNumberInRange(string message, int min, int max)
             {
-            int number;
             bool success;
 
             Console.WriteLine(message);
@@ -45,7 +43,7 @@ namespace CsharpPlayersGuide.Exercises.Utilities
                 while (true)
                 {
                     string? input = Console.ReadLine();
-                    success = int.TryParse(input, out number);
+                    success = int.TryParse(input, out int number);
 
                     if (success && number >= min && number <= max)
                     {
