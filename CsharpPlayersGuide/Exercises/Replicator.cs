@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Numerics;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -11,6 +12,21 @@ namespace CsharpPlayersGuide.Exercises
     {
         public static void ReplicatorOfDTo()
         {
+
+            Console.WriteLine("The Laws of Freach".ToUpper());
+            int[] array = { 4, 51, -7, 13, -99, 15, -8, 45, 90 };
+            int currentSmallest = int.MaxValue;
+            int total = 0;
+            foreach (int number in array)
+            {
+                if (number < currentSmallest)
+                    currentSmallest = number;
+                total += number;
+            }
+            float average = (float)total / array.Length;
+            Console.WriteLine($"The smallest number is {currentSmallest}; and the average is {average:0.00}");
+
+
             int[] array1 = new int[5];
         
             for (int i = 0; i < 5; i++)
