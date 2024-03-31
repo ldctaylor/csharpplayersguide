@@ -1,4 +1,5 @@
-﻿using System;
+﻿using CsharpPlayersGuide.Exercises.Utilities;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -18,8 +19,7 @@ namespace CsharpPlayersGuide.Exercises
 
         public static void DistributeEggs()
         {
-            Console.WriteLine("How many chocolate eggs were gathered today?");
-            totalEggs = int.Parse(Console.ReadLine());
+            totalEggs = AskNumber.AskForNumber("How many chocolate eggs were gathered today?");
             duckbear = totalEggs % numberOfSiblings;
             sister = totalEggs / numberOfSiblings;
             string pluralise = (sister == 1 ? "" : "s");

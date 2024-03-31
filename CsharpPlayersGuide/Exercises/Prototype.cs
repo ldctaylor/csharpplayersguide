@@ -1,4 +1,5 @@
-﻿using System;
+﻿using CsharpPlayersGuide.Exercises.Utilities;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -16,13 +17,11 @@ namespace CsharpPlayersGuide.Exercises
             Prototype pilot = new();
             Prototype guess = new();
 
-            Console.WriteLine("User 1, enter a number between 0 and 100:");
-            pilot.number = Convert.ToInt32(Console.ReadLine());
+            pilot.number = AskNumber.AskForNumberInRange("User 1, enter a number between 0 and 100:",0,100);
 
             while (true)
             {
-                Console.WriteLine("User 2, guess the number.");
-                guess.number = Convert.ToInt32(Console.ReadLine());
+                guess.number = AskNumber.AskForNumber("User 2, guess the number.");
 
                 if (guess.number > pilot.number) Console.WriteLine($"{guess.number} is too high");
                 else if (guess.number < pilot.number) Console.WriteLine($"{guess.number} is too low");
