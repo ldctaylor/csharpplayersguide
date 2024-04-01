@@ -12,38 +12,20 @@ namespace CsharpPlayersGuide.Exercises
 {
     internal class Cannon
     {
-        public static void FireCannon()
+        public static int FireCannon(int turnNumber)
         {
+            int damage = 0;
 
-            for (int i = 0; i <= 100; i++)
-            {
-                if (i % 3 == 0 && i % 5 == 0)
-                {
-                    Console.BackgroundColor = ConsoleColor.Blue;
-                    Console.WriteLine($"{i}: Electric and fire");
-                    continue;
-                }
+            if (turnNumber % 3 == 0 && turnNumber % 5 == 0)
+                damage = 10;
 
-                else if (i % 3 == 0)
-                { 
+            else if (turnNumber % 3 == 0 || turnNumber % 5 == 0)
+                damage = 3;
 
-                    Console.BackgroundColor = ConsoleColor.Red;
-                    Console.WriteLine($"{i}: Fire");
+            else
+                damage = 1;
 
-                }
-
-                else if (i % 5 == 0)
-                {
-                    Console.BackgroundColor = ConsoleColor.Yellow;
-                    Console.WriteLine($"{i}: Electric");
-                }
-
-                else
-                {
-                    Console.BackgroundColor = ConsoleColor.Black;
-                    Console.WriteLine($"{i}: Normal");
-                }
-            }
+            return damage;
         }
     }
 }

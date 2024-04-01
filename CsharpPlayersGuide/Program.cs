@@ -5,6 +5,7 @@
 using CsharpPlayersGuide.Exercises;
 using CsharpPlayersGuide.Exercises.Utilities;
 
+HuntingTheManticore.PlayManticoreGame();
 //Countdown.Recurse(10);
 //AskNumber.AskForNumberInRange("Please enter a number",0,10);
 //Replicator.ReplicatorOfDTo();

@@ -37,7 +37,7 @@ namespace CsharpPlayersGuide.Exercises.Utilities
             {
             bool success;
 
-            Console.WriteLine(message);
+            Console.Write(message);
 
                 {
                 while (true)
