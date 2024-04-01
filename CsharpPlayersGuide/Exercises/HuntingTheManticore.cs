@@ -2,8 +2,10 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Security.Cryptography.X509Certificates;
 using System.Text;
 using System.Threading.Tasks;
+using static System.Net.Mime.MediaTypeNames;
 
 namespace CsharpPlayersGuide.Exercises
 {
@@ -19,24 +21,20 @@ namespace CsharpPlayersGuide.Exercises
             Console.Clear();
             Console.WriteLine("Player 2, it is your turn.");
 
-            while (true)
+            while (healthManticore > 0 && healthConsolas > 0)
             {
                 Console.WriteLine("--------------------------------------------------------------------");
-                Console.WriteLine($"STATUS: Round: {round} City: {healthConsolas}/15 Manticore: {healthManticore}/10");
+                DisplayStatus(round, healthConsolas, healthManticore);
                 int damage = Cannon.FireCannon(round);
                 Console.WriteLine($"The cannon is expected to deal {damage} this round.");
                 int range = AskNumber.AskForNumberInRange("Enter desired cannon range: ", 0, 101);
 
-                if (range < attackRange)
-                    Console.WriteLine("That round FELL SHORT of the target.");
-                else if (range > attackRange)
-                    Console.WriteLine("That round OVERSHOT the target.");
-                else
-                {
-                    Console.WriteLine("That round was a DIRECT HIT!");
+                DetermineIfAttackHits(range, attackRange);
+                if (range == attackRange)
                     healthManticore -= damage;
-                }
                 healthConsolas--;
+                round++;
+            }
 
                 if (healthManticore <= 0 && healthConsolas <= 0)
                 {
@@ -60,7 +58,21 @@ namespace CsharpPlayersGuide.Exercises
                     Console.Beep(450, 1000);
                     return;
                 }
-                round++;
+        }
+
+        public static void DisplayStatus(int round, int healthConsolas, int healthManticore)
+        {
+            Console.WriteLine($"STATUS: Round: {round} City: {healthConsolas}/15 Manticore: {healthManticore}/10");
+        }
+        public static void DetermineIfAttackHits(int range, int attackRange)
+        {
+            if (range < attackRange)
+                Console.WriteLine("That round FELL SHORT of the target.");
+            else if (range > attackRange)
+                Console.WriteLine("That round OVERSHOT the target.");
+            else
+            {
+                Console.WriteLine("That round was a DIRECT HIT!");
             }
         }
     }
