@@ -5,8 +5,8 @@
 using CsharpPlayersGuide.Exercises;
 using CsharpPlayersGuide.Exercises.Utilities;
 
-SimulasTest.ReportChestStatus();
-
+SimulasSoup.PrintDish(SimulasSoup.CookDish());
+//SimulasTest.ReportChestStatus();
 //HuntingTheManticore.PlayManticoreGame();
 //Countdown.Recurse(10);
 //AskNumber.AskForNumberInRange("Please enter a number",0,10);
