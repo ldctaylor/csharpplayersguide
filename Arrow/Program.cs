@@ -1,22 +1,29 @@
-﻿class Program
+﻿
+namespace ArrowMaker
 {
-    static void Main()
+    public class Program
+{
+    static void Main(string[] args)
     {
-
         Arrow arrow = MakeArrow();
         Console.WriteLine("Your arrow costs " + arrow.GetCost() + " gold.");
 
-        Arrow MakeArrow()
+    }
+        public static Arrow MakeArrow()
         {
-            Arrowhead arrowhead = ChooseArrowHead();
-            Fletching fletching = ChooseFletching();
-            float length = ChooseLength();
+            Arrowhead arrowhead = Utility.ChooseArrowHead();
+            Fletching fletching = Utility.ChooseFletching();
+            float length = Utility.ChooseLength();
 
             return new Arrow(arrowhead, fletching, length);
 
         }
 
-        Arrowhead ChooseArrowHead()
+    }
+
+    static public class Utility
+    {
+        static public Arrowhead ChooseArrowHead()
         {
             Console.Write("What arrowhead would you like? Choose from steel, wood, or obsidian: ");
             string? arrowhead = Console.ReadLine();
@@ -36,7 +43,7 @@
 
         }
 
-        Fletching ChooseFletching()
+        public static Fletching ChooseFletching()
         {
             Console.Write("What fletching would you like? Choose from plastic, turkey feathers, or goose feathers: ");
             string? fletching = Console.ReadLine();
@@ -55,7 +62,7 @@
             }
         }
 
-        float ChooseLength()
+        public static float ChooseLength()
         {
             Console.Write("What length would you like your arrow? Choose between 60 - 100cm: ");
             float length = Convert.ToInt32(Console.ReadLine());
@@ -69,13 +76,13 @@
                 return length;
             }
         }
-
     }
-    class Arrow
+
+    public class Arrow
     {
-        Arrowhead _arrowhead;
-        Fletching _fletching;
-        float _length;
+        public Arrowhead _arrowhead;
+        public Fletching _fletching;
+        public float _length;
 
         public Arrow(Arrowhead arrowhead, Fletching fletching, float length)
         {
@@ -99,19 +106,17 @@
             return arrowheadCost + lengthCost + fletchingCost;
         }
     }
-    enum Arrowhead
+    public enum Arrowhead
     {
         Steel,
         Wood,
         Obsidian
     }
 
-    enum Fletching
+    public enum Fletching
     {
         Plastic,
         TurkeyFeathers,
         GooseFeathers
     }
-
-    }
-
+}
