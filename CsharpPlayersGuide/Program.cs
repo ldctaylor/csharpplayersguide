@@ -5,7 +5,7 @@
 using CsharpPlayersGuide.Exercises;
 using CsharpPlayersGuide.Exercises.Utilities;
 
-SimulasSoup.PrintDish(SimulasSoup.CookDish());
+// SimulasSoup.PrintDish(SimulasSoup.CookDish());
 //SimulasTest.ReportChestStatus();
 //HuntingTheManticore.PlayManticoreGame();
 //Countdown.Recurse(10);
@@ -19,4 +19,5 @@ SimulasSoup.PrintDish(SimulasSoup.CookDish());
 //Beep.BeepBoop();
 //SistersAndDuckBear.DistributeEggs();
 //SistersAndDuckBear.DuckBearLucky();
+Door.Run();
 
